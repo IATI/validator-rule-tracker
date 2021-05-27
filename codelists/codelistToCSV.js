@@ -6,7 +6,7 @@ import { fetchTextfromGitHub } from "../utils/utils.js";
 const VERSIONS = ["2.01", "2.02", "2.03"];
 
 let csv = fs.createWriteStream(`codelists.csv`);
-csv.write(`ID,Category,Severity,Codelist,Message,Context (Xpath) \n`);
+csv.write(`id,category,severity,version,message,xpath,codelist \n`);
 
 VERSIONS.forEach(async (version) => {
   const codelistBranch = `v${version}/validatorCodelist`;
@@ -34,7 +34,7 @@ VERSIONS.forEach(async (version) => {
     const { category, id, message, severity } =
       mapping["validation-rules"][0]["validation-rule"][0];
     csv.write(
-      `${id[0]},${category[0]},${severity[0]},${codelist},\"${message[0]}\",${xpath}\n`
+      `${id[0]},${category[0]},${severity[0]},${version},\"${message[0]}\",${xpath},${codelist} \n`
     );
   });
 });
