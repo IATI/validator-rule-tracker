@@ -24,17 +24,23 @@ VERSIONS.forEach(async (version) => {
   jsonCodelistMapping.mappings.mapping.forEach((mapping) => {
     const codelist = mapping.codelist[0].$.ref;
     const path = mapping.path[0];
-    let xpath
+    let xpath;
     if (mapping.condition) {
-      let condition = mapping.condition[0]
+      let condition = mapping.condition[0];
       xpath = path.split("/@code")[0] + "[" + condition + "]" + "/@code";
     } else {
-      xpath = path
+      xpath = path;
     }
     const { category, id, message, severity } =
       mapping["validation-rules"][0]["validation-rule"][0];
+    let formattedMessage;
+    if (message[0].includes('"')) {
+      formattedMessage = message[0].replace('"', `""`);
+    } else {
+      formattedMessage = message[0]
+    }
     csv.write(
-      `${id[0]},${category[0]},${severity[0]},${version},\"${message[0]}\",${xpath},${codelist} \n`
+      `${id[0]},${category[0]},${severity[0]},${version},\"${formattedMessage}\",${xpath},${codelist} \n`
     );
   });
 });
