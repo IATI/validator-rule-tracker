@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "utility to export iati JSON rulesets and codelists to csv",
   "scripts": {
-    "rulesets": "node ./rulesets/rulesetToCSV.js"
+    "rulesets": "node ./rulesets/rulesetToCSV.js",
+    "codelists": "node ./codelists/codelistToCSV.js"
   },
   "author": "Nik Osvalds",
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "xml2js": "^0.4.23"
   }
 }
