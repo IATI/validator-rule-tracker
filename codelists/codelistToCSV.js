@@ -35,7 +35,7 @@ VERSIONS.forEach(async (version) => {
       mapping["validation-rules"][0]["validation-rule"][0];
     let formattedMessage;
     if (message[0].includes('"')) {
-      formattedMessage = message[0].replace('"', `""`);
+      formattedMessage = message[0].replace(/\"/g, `""`);
     } else {
       formattedMessage = message[0]
     }
