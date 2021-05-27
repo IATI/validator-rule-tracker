@@ -12,3 +12,13 @@ export async function fetchJSONfromGitHub(repo, branch, fileName) {
     });
     return res.json();
 }
+
+export async function fetchTextfromGitHub(repo, branch, fileName) {
+    const res = await fetch(`${GITHUB_RAW}/IATI/${repo}/${branch}/${fileName}`, {
+        method: 'GET',
+        headers: {
+            Accept: 'text/plain',
+        },
+    });
+    return res.text();
+}
