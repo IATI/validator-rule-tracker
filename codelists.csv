@@ -1,4 +1,88 @@
 id,category,severity,version,message,xpath,codelist 
+9.1.1,iati,error,2.01,"The IATI version of the dataset is not a valid version number.",//iati-activities/@version,Version 
+9.3.1,financial,error,2.01,"The default currency code is invalid.",//iati-activity/@default-currency,Currency 
+9.4.1,information,error,2.01,"The activity date type is invalid.",//iati-activity/activity-date/@type,ActivityDateType 
+9.5.1,information,error,2.01,"The activity status code is invalid.",//iati-activity/activity-status/@code,ActivityStatus 
+9.6.1,information,error,2.01,"The activity scope code is invalid.",//iati-activity/activity-scope/@code,ActivityScope 
+9.8.1,financial,error,2.01,"The budget type is invalid.",//iati-activity/budget/@type,BudgetType 
+9.9.1,financial,error,2.01,"The currency code is invalid.",//iati-activity/budget/value/@currency,Currency 
+9.10.1,classifications,error,2.01,"The collaboration type is invalid.",//iati-activity/collaboration-type/@code,CollaborationType 
+9.11.1,performance,error,2.01,"The condition type is invalid.",//iati-activity/conditions/condition/@type,ConditionType 
+9.12.1,information,error,2.01,"The contact information type is invalid.",//iati-activity/contact-info/@type,ContactType 
+9.13.1,classifications,error,2.01,"The country budget identifier vocabulary is invalid.",//iati-activity/country-budget-items/@vocabulary,BudgetIdentifierVocabulary 
+9.14.1,classifications,error,2.01,"The country budget item identifier is invalid.",//iati-activity/country-budget-items/budget-item[../@vocabulary = '1']/@code,BudgetIdentifier 
+9.15.1,classifications,error,2.01,"The country budget item description type is invalid.",//iati-activity/country-budget-items/budget-item/description/@type,DescriptionType 
+9.17.1,classifications,error,2.01,"The CRS other flag code is invalid.",//iati-activity/crs-add/other-flags/@code,CRSAddOtherFlags 
+9.18.1,classifications,error,2.01,"The currency code is invalid.",//iati-activity/crs-add/loan-status/@currency,Currency 
+9.19.1,classifications,error,2.01,"The repayment plan code is invalid.",//iati-activity/crs-add/loan-terms/repayment-plan/@code,LoanRepaymentPeriod 
+9.20.1,classifications,error,2.01,"The repayment type is invalid.",//iati-activity/crs-add/loan-terms/repayment-type/@code,LoanRepaymentType 
+9.21.1,classifications,error,2.01,"The default aid type is invalid.",//iati-activity/default-aid-type/@code,AidType 
+9.23.1,classifications,error,2.01,"The default finance type is invalid.",//iati-activity/default-finance-type/@code,FinanceType 
+9.24.1,classifications,error,2.01,"The default flow type is invalid.",//iati-activity/default-flow-type/@code,FlowType 
+9.25.1,classifications,error,2.01,"The default tied aid status code is invalid.",//iati-activity/default-tied-status/@code,TiedStatus 
+9.26.1,information,error,2.01,"The description type is invalid.",//iati-activity/description/@type,DescriptionType 
+9.27.1,documents,error,2.01,"The document format is invalid.",//iati-activity/document-link/@format,FileFormat 
+9.28.1,documents,error,2.01,"The document category code is invalid.",//iati-activity/document-link/category/@code,DocumentCategory 
+9.29.1,documents,error,2.01,"The document language code is invalid.",//iati-activity/document-link/language/@code,Language 
+9.30.1,financial,error,2.01,"The currency code is invalid.",//iati-activity/fss/forecast/@currency,Currency 
+9.117.1,geo,error,2.01,"The country code is invalid.",//iati-activity/location/administrative[@vocabulary = 'A4']/@code,Country 
+9.33.1,geo,error,2.01,"The location's administrative vocabulary is invalid.",//iati-activity/location/administrative/@vocabulary,GeographicVocabulary 
+9.34.1,geo,error,2.01,"The location feature designation type code is invalid.",//iati-activity/location/feature-designation/@code,LocationType 
+9.35.1,geo,error,2.01,"The location class code is invalid.",//iati-activity/location/location-class/@code,GeographicLocationClass 
+9.36.1,geo,error,2.01,"The location identifier vocabulary is invalid.",//iati-activity/location/location-id/@vocabulary,GeographicVocabulary 
+9.37.1,geo,error,2.01,"The location reach code is invalid.",//iati-activity/location/location-reach/@code,GeographicLocationReach 
+9.38.1,geo,error,2.01,"The location exactness code is invalid.",//iati-activity/location/exactness/@code,GeographicExactness 
+9.39.1,identifiers,error,2.01,"The ""other identifier"" type is invalid.",//iati-activity/other-identifier/@type,OtherIdentifierType 
+9.41.1,participating,error,2.01,"The organisation role is invalid.",//iati-activity/participating-org/@role,OrganisationRole 
+9.42.1,participating,error,2.01,"The organisation type is invalid.",//iati-activity/participating-org/@type,OrganisationType 
+9.43.1,financial,error,2.01,"The planned disbursement budget type is invalid.",//iati-activity/planned-disbursement/@type,BudgetType 
+9.46.1,financial,error,2.01,"The currency code is invalid.",//iati-activity/planned-disbursement/value/@currency,Currency 
+9.47.1,classifications,error,2.01,"The policy marker code is invalid.",//iati-activity/policy-marker[@vocabulary = '1' or not(@vocabulary)]/@code,PolicyMarker 
+9.48.1,classifications,error,2.01,"The policy marker significance is invalid.",//iati-activity/policy-marker/@significance,PolicySignificance 
+9.49.1,classifications,error,2.01,"The policy marker vocabulary is invalid.",//iati-activity/policy-marker/@vocabulary,PolicyMarkerVocabulary 
+9.50.1,geo,error,2.01,"The recipient country code is invalid.",//iati-activity/recipient-country/@code,Country 
+9.51.1,geo,error,2.01,"The recipient region code is invalid.",//iati-activity/recipient-region[@vocabulary = '1' or not(@vocabulary)]/@code,Region 
+9.52.1,geo,error,2.01,"The recipient region vocabulary is invalid.",//iati-activity/recipient-region/@vocabulary,RegionVocabulary 
+9.53.1,relations,error,2.01,"The related activity type is invalid.",//iati-activity/related-activity/@type,RelatedActivityType 
+9.54.1,identifiers,error,2.01,"The organisation type is invalid.",//iati-activity/reporting-org/@type,OrganisationType 
+9.55.1,performance,error,2.01,"The result type is invalid.",//iati-activity/result/@type,ResultType 
+9.56.1,performance,error,2.01,"The result description type is invalid.",//iati-activity/result/description/@type,DescriptionType 
+9.60.1,performance,error,2.01,"The indicator measure is invalid.",//iati-activity/result/indicator/@measure,IndicatorMeasure 
+9.64.1,performance,error,2.01,"The indicator description type is invalid.",//iati-activity/result/indicator/description/@type,DescriptionType 
+9.76.1,classifications,error,2.01,"The OECD DAC sector is invalid.",//iati-activity/sector[@vocabulary = '1' or not(@vocabulary)]/@code,Sector 
+9.77.1,classifications,error,2.01,"The OECD DAC category is invalid.",//iati-activity/sector[@vocabulary = '2']/@code,SectorCategory 
+9.129.1,classifications,error,2.01,"The UNSDG goal code is invalid.",//iati-activity/sector[@vocabulary = '7']/@code,UNSDG-Goals 
+9.130.1,classifications,error,2.01,"The UNSDG target code is invalid.",//iati-activity/sector[@vocabulary = '8']/@code,UNSDG-Targets 
+9.78.1,classifications,error,2.01,"The sector vocabulary is invalid.",//iati-activity/sector/@vocabulary,SectorVocabulary 
+9.80.1,financial,error,2.01,"The aid type is invalid.",//iati-activity/transaction/aid-type/@code,AidType 
+9.82.1,financial,error,2.01,"The disbursement channel code is invalid.",//iati-activity/transaction/disbursement-channel/@code,DisbursementChannel 
+9.83.1,financial,error,2.01,"The finance type is invalid.",//iati-activity/transaction/finance-type/@code,FinanceType 
+9.84.1,financial,error,2.01,"The flow type is invalid.",//iati-activity/transaction/flow-type/@code,FlowType 
+9.85.1,financial,error,2.01,"The recipient country code is invalid.",//iati-activity/transaction/recipient-country/@code,Country 
+9.86.1,financial,error,2.01,"The recipient region code is invalid.",//iati-activity/transaction/recipient-region[@vocabulary = '1' or not(@vocabulary)]/@code,Region 
+9.87.1,financial,error,2.01,"The recipient region vocabulary is invalid.",//iati-activity/transaction/recipient-region/@vocabulary,RegionVocabulary 
+9.90.1,financial,error,2.01,"The OECD DAC sector is invalid.",//iati-activity/transaction/sector[@vocabulary = '1' or not(@vocabulary)]/@code,Sector 
+9.124.1,financial,error,2.01,"The DAC3 sector code is invalid.",//iati-activity/transaction/sector[@vocabulary = '2']/@code,SectorCategory 
+9.131.1,financial,error,2.01,"The UNSDG goal code is invalid.",//iati-activity/transaction/sector[@vocabulary = '7']/@code,UNSDG-Goals 
+9.132.1,financial,error,2.01,"The UNSDG target code is invalid.",//iati-activity/transaction/sector[@vocabulary = '8']/@code,UNSDG-Targets 
+9.91.1,financial,error,2.01,"The sector vocabulary is invalid.",//iati-activity/transaction/sector/@vocabulary,SectorVocabulary 
+9.92.1,financial,error,2.01,"The tied status code is invalid.",//iati-activity/transaction/tied-status/@code,TiedStatus 
+9.93.1,financial,error,2.01,"The transaction type is invalid.",//iati-activity/transaction/transaction-type/@code,TransactionType 
+9.94.1,financial,error,2.01,"The currency code is invalid.",//iati-activity/transaction/value/@currency,Currency 
+9.95.1,iati,error,2.01,"The language code is invalid.",//@xml:lang,Language 
+9.97.1,iati,error,2.01,"The IATI version of the dataset is not a valid version number.",//iati-organisations/@version,Version 
+9.96.1,organisation,error,2.01,"The currency code is invalid.",//iati-organisation/@default-currency,Currency 
+9.112.1,information,error,2.01,"The organisation type is invalid.",//iati-organisation/reporting-org/@type,OrganisationType 
+9.122.1,financial,error,2.01,"The currency code is invalid.",//iati-organisation/recipient-country-budget/budget-line/value/@currency,Currency 
+9.103.1,financial,error,2.01,"The recipient country code is invalid.",//iati-organisation/recipient-country-budget/recipient-country/@code,Country 
+9.98.1,documents,error,2.01,"The document format is invalid.",//iati-organisation/document-link/@format,FileFormat 
+9.99.1,documents,error,2.01,"The document category code is invalid.",//iati-organisation/document-link/category/@code,DocumentCategory 
+9.100.1,documents,error,2.01,"The language code is invalid.",//iati-organisation/document-link/language/@code,Language 
+9.101.1,documents,error,2.01,"The recipient country code is invalid.",//iati-organisation/document-link/recipient-country/@code,Country 
+9.114.1,financial,error,2.01,"The currency code is invalid.",//iati-organisation/total-budget/value/@currency,Currency 
+9.123.1,financial,error,2.01,"The currency code is invalid.",//iati-organisation/recipient-org-budget/budget-line/value/@currency,Currency 
+9.106.1,financial,error,2.01,"The currency code is invalid.",//iati-organisation/recipient-org-budget/value/@currency,Currency 
+9.104.1,financial,error,2.01,"The currency code is invalid.",//iati-organisation/recipient-country-budget/value/@currency,Currency 
 9.1.1,iati,error,2.03,"The IATI version of the dataset is not a valid version number.",//iati-activities/@version,Version 
 9.2.1,financial,error,2.03,"The code to indicate why no budget is provided is invalid.",//iati-activity/@budget-not-provided,BudgetNotProvided 
 9.3.1,financial,error,2.03,"The default currency code is invalid.",//iati-activity/@default-currency,Currency 
@@ -127,90 +211,6 @@ id,category,severity,version,message,xpath,codelist
 9.112.1,information,error,2.03,"The organisation type is invalid.",//iati-organisation/reporting-org/@type,OrganisationType 
 9.113.1,financial,error,2.03,"The budget status is invalid.",//iati-organisation/total-budget/@status,BudgetStatus 
 9.114.1,financial,error,2.03,"The currency code is invalid.",//iati-organisation/total-budget/value/@currency,Currency 
-9.1.1,iati,error,2.01,"The IATI version of the dataset is not a valid version number.",//iati-activities/@version,Version 
-9.3.1,financial,error,2.01,"The default currency code is invalid.",//iati-activity/@default-currency,Currency 
-9.4.1,information,error,2.01,"The activity date type is invalid.",//iati-activity/activity-date/@type,ActivityDateType 
-9.5.1,information,error,2.01,"The activity status code is invalid.",//iati-activity/activity-status/@code,ActivityStatus 
-9.6.1,information,error,2.01,"The activity scope code is invalid.",//iati-activity/activity-scope/@code,ActivityScope 
-9.8.1,financial,error,2.01,"The budget type is invalid.",//iati-activity/budget/@type,BudgetType 
-9.9.1,financial,error,2.01,"The currency code is invalid.",//iati-activity/budget/value/@currency,Currency 
-9.10.1,classifications,error,2.01,"The collaboration type is invalid.",//iati-activity/collaboration-type/@code,CollaborationType 
-9.11.1,performance,error,2.01,"The condition type is invalid.",//iati-activity/conditions/condition/@type,ConditionType 
-9.12.1,information,error,2.01,"The contact information type is invalid.",//iati-activity/contact-info/@type,ContactType 
-9.13.1,classifications,error,2.01,"The country budget identifier vocabulary is invalid.",//iati-activity/country-budget-items/@vocabulary,BudgetIdentifierVocabulary 
-9.14.1,classifications,error,2.01,"The country budget item identifier is invalid.",//iati-activity/country-budget-items/budget-item[../@vocabulary = '1']/@code,BudgetIdentifier 
-9.15.1,classifications,error,2.01,"The country budget item description type is invalid.",//iati-activity/country-budget-items/budget-item/description/@type,DescriptionType 
-9.17.1,classifications,error,2.01,"The CRS other flag code is invalid.",//iati-activity/crs-add/other-flags/@code,CRSAddOtherFlags 
-9.18.1,classifications,error,2.01,"The currency code is invalid.",//iati-activity/crs-add/loan-status/@currency,Currency 
-9.19.1,classifications,error,2.01,"The repayment plan code is invalid.",//iati-activity/crs-add/loan-terms/repayment-plan/@code,LoanRepaymentPeriod 
-9.20.1,classifications,error,2.01,"The repayment type is invalid.",//iati-activity/crs-add/loan-terms/repayment-type/@code,LoanRepaymentType 
-9.21.1,classifications,error,2.01,"The default aid type is invalid.",//iati-activity/default-aid-type/@code,AidType 
-9.23.1,classifications,error,2.01,"The default finance type is invalid.",//iati-activity/default-finance-type/@code,FinanceType 
-9.24.1,classifications,error,2.01,"The default flow type is invalid.",//iati-activity/default-flow-type/@code,FlowType 
-9.25.1,classifications,error,2.01,"The default tied aid status code is invalid.",//iati-activity/default-tied-status/@code,TiedStatus 
-9.26.1,information,error,2.01,"The description type is invalid.",//iati-activity/description/@type,DescriptionType 
-9.27.1,documents,error,2.01,"The document format is invalid.",//iati-activity/document-link/@format,FileFormat 
-9.28.1,documents,error,2.01,"The document category code is invalid.",//iati-activity/document-link/category/@code,DocumentCategory 
-9.29.1,documents,error,2.01,"The document language code is invalid.",//iati-activity/document-link/language/@code,Language 
-9.30.1,financial,error,2.01,"The currency code is invalid.",//iati-activity/fss/forecast/@currency,Currency 
-9.117.1,geo,error,2.01,"The country code is invalid.",//iati-activity/location/administrative[@vocabulary = 'A4']/@code,Country 
-9.33.1,geo,error,2.01,"The location's administrative vocabulary is invalid.",//iati-activity/location/administrative/@vocabulary,GeographicVocabulary 
-9.34.1,geo,error,2.01,"The location feature designation type code is invalid.",//iati-activity/location/feature-designation/@code,LocationType 
-9.35.1,geo,error,2.01,"The location class code is invalid.",//iati-activity/location/location-class/@code,GeographicLocationClass 
-9.36.1,geo,error,2.01,"The location identifier vocabulary is invalid.",//iati-activity/location/location-id/@vocabulary,GeographicVocabulary 
-9.37.1,geo,error,2.01,"The location reach code is invalid.",//iati-activity/location/location-reach/@code,GeographicLocationReach 
-9.38.1,geo,error,2.01,"The location exactness code is invalid.",//iati-activity/location/exactness/@code,GeographicExactness 
-9.39.1,identifiers,error,2.01,"The ""other identifier"" type is invalid.",//iati-activity/other-identifier/@type,OtherIdentifierType 
-9.41.1,participating,error,2.01,"The organisation role is invalid.",//iati-activity/participating-org/@role,OrganisationRole 
-9.42.1,participating,error,2.01,"The organisation type is invalid.",//iati-activity/participating-org/@type,OrganisationType 
-9.43.1,financial,error,2.01,"The planned disbursement budget type is invalid.",//iati-activity/planned-disbursement/@type,BudgetType 
-9.46.1,financial,error,2.01,"The currency code is invalid.",//iati-activity/planned-disbursement/value/@currency,Currency 
-9.47.1,classifications,error,2.01,"The policy marker code is invalid.",//iati-activity/policy-marker[@vocabulary = '1' or not(@vocabulary)]/@code,PolicyMarker 
-9.48.1,classifications,error,2.01,"The policy marker significance is invalid.",//iati-activity/policy-marker/@significance,PolicySignificance 
-9.49.1,classifications,error,2.01,"The policy marker vocabulary is invalid.",//iati-activity/policy-marker/@vocabulary,PolicyMarkerVocabulary 
-9.50.1,geo,error,2.01,"The recipient country code is invalid.",//iati-activity/recipient-country/@code,Country 
-9.51.1,geo,error,2.01,"The recipient region code is invalid.",//iati-activity/recipient-region[@vocabulary = '1' or not(@vocabulary)]/@code,Region 
-9.52.1,geo,error,2.01,"The recipient region vocabulary is invalid.",//iati-activity/recipient-region/@vocabulary,RegionVocabulary 
-9.53.1,relations,error,2.01,"The related activity type is invalid.",//iati-activity/related-activity/@type,RelatedActivityType 
-9.54.1,identifiers,error,2.01,"The organisation type is invalid.",//iati-activity/reporting-org/@type,OrganisationType 
-9.55.1,performance,error,2.01,"The result type is invalid.",//iati-activity/result/@type,ResultType 
-9.56.1,performance,error,2.01,"The result description type is invalid.",//iati-activity/result/description/@type,DescriptionType 
-9.60.1,performance,error,2.01,"The indicator measure is invalid.",//iati-activity/result/indicator/@measure,IndicatorMeasure 
-9.64.1,performance,error,2.01,"The indicator description type is invalid.",//iati-activity/result/indicator/description/@type,DescriptionType 
-9.76.1,classifications,error,2.01,"The OECD DAC sector is invalid.",//iati-activity/sector[@vocabulary = '1' or not(@vocabulary)]/@code,Sector 
-9.77.1,classifications,error,2.01,"The OECD DAC category is invalid.",//iati-activity/sector[@vocabulary = '2']/@code,SectorCategory 
-9.129.1,classifications,error,2.01,"The UNSDG goal code is invalid.",//iati-activity/sector[@vocabulary = '7']/@code,UNSDG-Goals 
-9.130.1,classifications,error,2.01,"The UNSDG target code is invalid.",//iati-activity/sector[@vocabulary = '8']/@code,UNSDG-Targets 
-9.78.1,classifications,error,2.01,"The sector vocabulary is invalid.",//iati-activity/sector/@vocabulary,SectorVocabulary 
-9.80.1,financial,error,2.01,"The aid type is invalid.",//iati-activity/transaction/aid-type/@code,AidType 
-9.82.1,financial,error,2.01,"The disbursement channel code is invalid.",//iati-activity/transaction/disbursement-channel/@code,DisbursementChannel 
-9.83.1,financial,error,2.01,"The finance type is invalid.",//iati-activity/transaction/finance-type/@code,FinanceType 
-9.84.1,financial,error,2.01,"The flow type is invalid.",//iati-activity/transaction/flow-type/@code,FlowType 
-9.85.1,financial,error,2.01,"The recipient country code is invalid.",//iati-activity/transaction/recipient-country/@code,Country 
-9.86.1,financial,error,2.01,"The recipient region code is invalid.",//iati-activity/transaction/recipient-region[@vocabulary = '1' or not(@vocabulary)]/@code,Region 
-9.87.1,financial,error,2.01,"The recipient region vocabulary is invalid.",//iati-activity/transaction/recipient-region/@vocabulary,RegionVocabulary 
-9.90.1,financial,error,2.01,"The OECD DAC sector is invalid.",//iati-activity/transaction/sector[@vocabulary = '1' or not(@vocabulary)]/@code,Sector 
-9.124.1,financial,error,2.01,"The DAC3 sector code is invalid.",//iati-activity/transaction/sector[@vocabulary = '2']/@code,SectorCategory 
-9.131.1,financial,error,2.01,"The UNSDG goal code is invalid.",//iati-activity/transaction/sector[@vocabulary = '7']/@code,UNSDG-Goals 
-9.132.1,financial,error,2.01,"The UNSDG target code is invalid.",//iati-activity/transaction/sector[@vocabulary = '8']/@code,UNSDG-Targets 
-9.91.1,financial,error,2.01,"The sector vocabulary is invalid.",//iati-activity/transaction/sector/@vocabulary,SectorVocabulary 
-9.92.1,financial,error,2.01,"The tied status code is invalid.",//iati-activity/transaction/tied-status/@code,TiedStatus 
-9.93.1,financial,error,2.01,"The transaction type is invalid.",//iati-activity/transaction/transaction-type/@code,TransactionType 
-9.94.1,financial,error,2.01,"The currency code is invalid.",//iati-activity/transaction/value/@currency,Currency 
-9.95.1,iati,error,2.01,"The language code is invalid.",//@xml:lang,Language 
-9.97.1,iati,error,2.01,"The IATI version of the dataset is not a valid version number.",//iati-organisations/@version,Version 
-9.96.1,organisation,error,2.01,"The currency code is invalid.",//iati-organisation/@default-currency,Currency 
-9.112.1,information,error,2.01,"The organisation type is invalid.",//iati-organisation/reporting-org/@type,OrganisationType 
-9.122.1,financial,error,2.01,"The currency code is invalid.",//iati-organisation/recipient-country-budget/budget-line/value/@currency,Currency 
-9.103.1,financial,error,2.01,"The recipient country code is invalid.",//iati-organisation/recipient-country-budget/recipient-country/@code,Country 
-9.98.1,documents,error,2.01,"The document format is invalid.",//iati-organisation/document-link/@format,FileFormat 
-9.99.1,documents,error,2.01,"The document category code is invalid.",//iati-organisation/document-link/category/@code,DocumentCategory 
-9.100.1,documents,error,2.01,"The language code is invalid.",//iati-organisation/document-link/language/@code,Language 
-9.101.1,documents,error,2.01,"The recipient country code is invalid.",//iati-organisation/document-link/recipient-country/@code,Country 
-9.114.1,financial,error,2.01,"The currency code is invalid.",//iati-organisation/total-budget/value/@currency,Currency 
-9.123.1,financial,error,2.01,"The currency code is invalid.",//iati-organisation/recipient-org-budget/budget-line/value/@currency,Currency 
-9.106.1,financial,error,2.01,"The currency code is invalid.",//iati-organisation/recipient-org-budget/value/@currency,Currency 
-9.104.1,financial,error,2.01,"The currency code is invalid.",//iati-organisation/recipient-country-budget/value/@currency,Currency 
 9.1.1,iati,error,2.02,"The IATI version of the dataset is not a valid version number.",//iati-activities/@version,Version 
 9.3.1,financial,error,2.02,"The default currency code is invalid.",//iati-activity/@default-currency,Currency 
 9.4.1,information,error,2.02,"The activity date type is invalid.",//iati-activity/activity-date/@type,ActivityDateType 
