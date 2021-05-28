@@ -13,11 +13,11 @@ jobs:
     env:
       RESOURCE_NAME: ${{ github.event.client_payload.resourceName }}
       TRIGGER_REPO: ${{ github.event.client_payload.repo }}
-      TRIGGER_REF: ${{ github.event.client_payload.ref }}
+      TRIGGER_SHA: ${{ github.event.client_payload.SHA }}
     steps:     
       - name: 'Event Information'
         run: |
-          echo "Event '${{ github.event.action }}' for $RESOURCE_NAME received from $TRIGGER_REPO"
+          echo "Event '${{ github.event.action }}' for $RESOURCE_NAME received from $TRIGGER_REPO and commit sha $TRIGGER_SHA"
 
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@v2.3.4
@@ -57,5 +57,5 @@ jobs:
       - name: 'Commit changes'
         run: |
           git add $RESOURCE_NAME.csv
-          git commit -m "$RESOURCE_NAME.csv updated by GitHub Actions triggered by $TRIGGER_REPO $TRIGGER_REF"
+          git commit -m "$RESOURCE_NAME.csv updated by GitHub Actions triggered by $TRIGGER_REPO $TRIGGER_SHA"
           git push origin main
