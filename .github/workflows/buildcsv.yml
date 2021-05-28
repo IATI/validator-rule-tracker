@@ -7,16 +7,14 @@ env:
   NODE_VERSION: '14.x'
 
 jobs:
-  build:
+  update-csv:
+    if: github.event.action == 'update'
     runs-on: ubuntu-latest
     env:
       RESOURCE_NAME: ${{ github.event.client_payload.resourceName }}
       TRIGGER_REPO: ${{ github.event.client_payload.repo }}
       TRIGGER_REF: ${{ github.event.client_payload.ref }}
-    steps:
-      - name: 'Check Event Type'
-        if: github.event.action == 'update'
-
+    steps:     
       - name: 'Event Information'
         run: |
           echo "Event '${{ github.event.action }}' for $RESOURCE_NAME received from $TRIGGER_REPO"
