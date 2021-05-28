@@ -32,7 +32,7 @@ id,category,severity,version,message,xpath,codelist
 9.36.1,geo,error,2.01,"The location identifier vocabulary is invalid.",//iati-activity/location/location-id/@vocabulary,GeographicVocabulary 
 9.37.1,geo,error,2.01,"The location reach code is invalid.",//iati-activity/location/location-reach/@code,GeographicLocationReach 
 9.38.1,geo,error,2.01,"The location exactness code is invalid.",//iati-activity/location/exactness/@code,GeographicExactness 
-9.39.1,identifiers,error,2.01,"The ""other identifier"" type is invalid.",//iati-activity/other-identifier/@type,OtherIdentifierType 
+9.39.1,identifiers,error,2.01,"The other identifier type is invalid.",//iati-activity/other-identifier/@type,OtherIdentifierType 
 9.41.1,participating,error,2.01,"The organisation role is invalid.",//iati-activity/participating-org/@role,OrganisationRole 
 9.42.1,participating,error,2.01,"The organisation type is invalid.",//iati-activity/participating-org/@type,OrganisationType 
 9.43.1,financial,error,2.01,"The planned disbursement budget type is invalid.",//iati-activity/planned-disbursement/@type,BudgetType 
