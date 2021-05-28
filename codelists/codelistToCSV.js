@@ -8,7 +8,8 @@ const VERSIONS = ["2.01", "2.02", "2.03"];
 let csv = fs.createWriteStream(`codelists.csv`);
 csv.write(`id,category,severity,version,message,xpath,codelist \n`);
 
-VERSIONS.forEach(async (version) => {
+await VERSIONS.reduce(async (memo, version) => {
+  await memo;
   const codelistBranch = `v${version}/validatorCodelist`;
 
   const versCodelistMapping = await fetchTextfromGitHub(
@@ -37,10 +38,10 @@ VERSIONS.forEach(async (version) => {
     if (message[0].includes('"')) {
       formattedMessage = message[0].replace(/\"/g, `""`);
     } else {
-      formattedMessage = message[0]
+      formattedMessage = message[0];
     }
     csv.write(
       `${id[0]},${category[0]},${severity[0]},${version},\"${formattedMessage}\",${xpath},${codelist} \n`
     );
   });
-});
+}, undefined);

@@ -15,7 +15,8 @@ const writeInfoLine = (version, xpath, ruleType, subRuleType, oneCase) => {
   );
 };
 
-VERSIONS.forEach(async (version) => {
+await VERSIONS.reduce(async (memo, version) => {
+  await memo;
   const rulesetBranch = `v${version}/validatorV2`;
 
   const versRuleset = await fetchJSONfromGitHub(
@@ -39,4 +40,4 @@ VERSIONS.forEach(async (version) => {
       });
     })
   );
-});
+}, undefined);
