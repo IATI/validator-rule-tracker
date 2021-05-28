@@ -38,7 +38,9 @@ jobs:
             ${{ runner.os }}-
 
       - name: 'Install Dependencies with Npm'
-        run: npm install
+        run: |
+          npm install -g npm@latest
+          npm install
 
       - name: 'Extract CSVs'
         run: |
@@ -51,6 +53,6 @@ jobs:
 
       - name: 'commit changes'
         run: |
-          git add $RESOURCE_NAME
+          git add $RESOURCE_NAME.csv
           git commit -m "$RESOURCE_NAME.csv updated by GitHub Actions"
           git push origin main
