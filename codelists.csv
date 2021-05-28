@@ -225,7 +225,7 @@ id,category,severity,version,message,xpath,codelist
 9.36.1,geo,error,2.03,"The location identifier vocabulary is invalid.",//iati-activity/location/location-id/@vocabulary,GeographicVocabulary 
 9.37.1,geo,error,2.03,"The location reach code is invalid.",//iati-activity/location/location-reach/@code,GeographicLocationReach 
 9.38.1,geo,error,2.03,"The location exactness code is invalid.",//iati-activity/location/exactness/@code,GeographicExactness 
-9.39.1,identifiers,error,2.03,"The ""other identifier"" type is invalid.",//iati-activity/other-identifier/@type,OtherIdentifierType 
+9.39.1,identifiers,error,2.03,"The other identifier type is invalid.",//iati-activity/other-identifier/@type,OtherIdentifierType 
 9.40.1,participating,error,2.03,"The CRS channel code is invalid.",//iati-activity/participating-org/@crs-channel-code,CRSChannelCode 
 9.41.1,participating,error,2.03,"The organisation role is invalid.",//iati-activity/participating-org/@role,OrganisationRole 
 9.42.1,participating,error,2.03,"The organisation type is invalid.",//iati-activity/participating-org/@type,OrganisationType 
