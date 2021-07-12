@@ -2,5 +2,6 @@ id,category,severity,version,message,where defined
 0.1.1,iati,critical,all,"Error response from XML Parser",services/validationService.js
 0.2.1,iati,critical,all,"The file is not an IATI file.",services/validationService.js
 0.3.1,schema,critical,all,"Error response from Schema validator library",services/validationService.js
+0.4.1,iati,warning,all,"Line breaks found in closing tags have been removed, therefore line numbers returned by the validator may not match your file.",utils/utils.js
 0.6.1,documents,critical,N/A,"Version {version} of the IATI Standard is no longer supported. Supported versions: {versions}",services/validationService.js
 1.1.2,identifiers,error,all,"The activity identifier must be unique for each activity.",services/rulesValidator.js
