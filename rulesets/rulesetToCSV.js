@@ -5,13 +5,20 @@ const VERSIONS = ["2.01", "2.02", "2.03"];
 
 let csv = fs.createWriteStream(`rulesets.csv`);
 csv.write(
-  `id,category,severity,version,message,xpath,rule type, sub rule type \n`
+  `id,category,severity,version,message,xpath,rule type, sub rule type,guidance \n`
 );
 
 const writeInfoLine = (version, xpath, ruleType, subRuleType, oneCase) => {
-  const { id, category, severity, message } = oneCase.ruleInfo;
+  const { id, category, severity, message, link } = oneCase.ruleInfo;
+  let guidance = '';
+  if (typeof link === 'object' && 'url' in link) {
+    guidance = link.url
+  }
+  if (typeof link === 'object' && 'path' in link) {
+    guidance = link.path
+  }
   csv.write(
-    `${id},${category},${severity},${version},\"${message}\",${xpath},${ruleType},${subRuleType} \n`
+    `${id},${category},${severity},${version},\"${message}\",${xpath},${ruleType},${subRuleType},${guidance} \n`
   );
 };
 
