@@ -56,6 +56,11 @@ jobs:
 
       - name: 'Commit changes'
         run: |
-          git add $RESOURCE_NAME.csv
-          git commit -m "$RESOURCE_NAME.csv updated by GitHub Actions triggered by $TRIGGER_REPO $TRIGGER_SHA"
-          git push origin main
+          RESP=$(git add $RESOURCE_NAME.csv -v)
+          if [[ $RESP == "" ]]; then
+            echo "No changes to commit"
+            exit 0
+          else
+            git commit -m "$RESOURCE_NAME.csv updated by GitHub Actions triggered by $TRIGGER_REPO $TRIGGER_SHA"
+            git push origin main
+          fi
