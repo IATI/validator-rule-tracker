@@ -1,6 +1,6 @@
 {
   "name": "validator-rule-tracker",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "utility to export iati JSON rulesets and codelists to csv",
   "scripts": {
     "rulesets": "node ./rulesets/rulesetToCSV.js",
