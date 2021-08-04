@@ -137,14 +137,14 @@ id,category,severity,version,message,xpath,rule type, sub rule type,guidance
 3.7.2,financial,error,2.02,"Recipient country or recipient region should be declared for either the activity or for all transactions.",//iati-activity,if_then,,https://iatistandard.org/en/guidance/standard-guidance/countries-regions/ 
 3.1.1,geo,error,2.02,"When multiple recipient countries are declared, each must have a percentage.",//iati-activity,if_then,,https://iatistandard.org/en/guidance/standard-guidance/countries-regions/ 
 3.1.4,geo,error,2.02,"When a single recipient country is declared, the percentage must either be omitted, or set to 100.",//iati-activity,if_then,,https://iatistandard.org/en/guidance/standard-guidance/countries-regions/ 
-6.8.1,information,error,2.02,"The owner organisation must have an identifier or a narrative.",//iati-activity/other-identifier/owner-org,atleast_one,, 
+6.8.1,information,error,2.02,"The owner organisation must have an identifier or a narrative.",//iati-activity/other-identifier/owner-org,atleast_one,,activity-standard/iati-activities/iati-activity/other-identifier/owner-org/narrative 
 1.11.1,identifiers,warning,2.02,"The owner organisation identifier should not start or end with spaces or newlines.",//iati-activity/other-identifier/owner-org,no_spaces,, 
 1.11.13,identifiers,warning,2.02,"The owner organisation identifier must not contain any of the symbols /, &, | or ?.",//iati-activity/other-identifier/owner-org,regex_matches,, 
-6.9.1,financial,error,2.02,"The provider organisation must have an organisation identifier or a narrative.",//provider-org,atleast_one,, 
+6.9.1,financial,error,2.02,"The provider organisation must have an organisation identifier or a narrative.",//provider-org,atleast_one,,activity-standard/iati-activities/iati-activity/transaction/provider-org/narrative/ 
 1.10.13,financial,warning,2.02,"The provider organisation identifier must not contain any of the symbols /, &, | or ?.",//provider-org,regex_matches,, 
 1.10.1,financial,warning,2.02,"The provider organisation identifier should not start or end with spaces or newlines.",//provider-org,no_spaces,, 
 1.4.1,financial,warning,2.02,"The provider-org activity identifier should not start or end with spaces or newlines.",//provider-org,no_spaces,, 
-6.9.2,financial,error,2.02,"The receiver organisation must have an organisation identifier or a narrative.",//receiver-org,atleast_one,, 
+6.9.2,financial,error,2.02,"The receiver organisation must have an organisation identifier or a narrative.",//receiver-org,atleast_one,,activity-standard/iati-activities/iati-activity/transaction/receiver-org/narrative/ 
 1.15.1,financial,warning,2.02,"The receiver-org identifier should not start or end with spaces or newlines.",//receiver-org,no_spaces,, 
 1.5.1,financial,warning,2.02,"The receiver-org activity identifier should not start or end with spaces or newlines.",//receiver-org,no_spaces,, 
 1.15.13,financial,warning,2.02,"The receiver-org identifier must not contain any of the symbols /, &, | or ?.",//receiver-org,regex_matches,, 
@@ -156,7 +156,7 @@ id,category,severity,version,message,xpath,rule type, sub rule type,guidance
 1.12.1,organisation,warning,2.02,"The organisation-identifier should not start or end with spaces or newlines.",//iati-organisation,no_spaces,,https://iatistandard.org/en/guidance/preparing-organisation/organisation-account/how-to-create-your-iati-organisation-identifier/ 
 1.17.1,organisation,warning,2.02,"The recipient organisation identifier should not start or end with spaces or newlines.",//iati-organisation,no_spaces,, 
 1.18.1,identifiers,warning,2.02,"The reporting-org identifier should not start or end with spaces or newlines.",//iati-organisation,no_spaces,,https://iatistandard.org/en/guidance/preparing-organisation/organisation-account/how-to-create-your-iati-organisation-identifier/ 
-11.4.1,information,error,2.02,"The last updated datetime of the organisation must not be in the future.",//iati-organisation,date_now,, 
+11.4.1,information,error,2.02,"The last updated datetime of the organisation must not be in the future.",//iati-organisation,date_now,,organisation-standard/iati-organisations/iati-organisation/ 
 4.5.1,information,error,2.02,"The organisation should specify a default language, or the language should be specified for each narrative element.",//iati-organisation,one_or_all,,codelists/Language/ 
 7.8.2,financial,error,2.02,"The financial value must have a specified currency, or the organisation must declare a default currency.",//iati-organisation,one_or_all,,codelists/Currency/ 
 6.10.1,participating,error,2.02,"The participating organisation must have an identifier or a narrative.",//participating-org,atleast_one,,https://iatistandard.org/en/guidance/standard-guidance/activity-participants/ 
