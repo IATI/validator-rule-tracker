@@ -20,7 +20,7 @@ jobs:
           echo "Event '${{ github.event.action }}' for $RESOURCE_NAME received from $TRIGGER_REPO and commit sha $TRIGGER_SHA"
 
       - name: 'Checkout GitHub Action'
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.3.5
 
       - name: 'Setup Node ${{ env.NODE_VERSION }} Environment'
         uses: actions/setup-node@v2.4.1
