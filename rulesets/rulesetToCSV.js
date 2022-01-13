@@ -24,7 +24,7 @@ const writeInfoLine = (version, xpath, ruleType, subRuleType, oneCase) => {
 
 await VERSIONS.reduce(async (memo, version) => {
   await memo;
-  const rulesetBranch = `v${version}/validatorV2`;
+  const rulesetBranch = `version-${version}`;
 
   const versRuleset = await fetchJSONfromGitHub(
     "IATI-Rulesets",
