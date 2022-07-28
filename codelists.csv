@@ -197,8 +197,6 @@ id,category,severity,version,message,xpath,codelist
 9.11.1,performance,error,2.03,"The condition type is invalid.",//iati-activity/conditions/condition/@type,ConditionType 
 9.12.1,information,error,2.03,"The contact information type is invalid.",//iati-activity/contact-info/@type,ContactType 
 9.13.1,classifications,error,2.03,"The country budget identifier vocabulary is invalid.",//iati-activity/country-budget-items/@vocabulary,BudgetIdentifierVocabulary 
-9.14.1,classifications,error,2.03,"The country budget item identifier is invalid.",//iati-activity/country-budget-items/budget-item[../@vocabulary = '1']/@code,BudgetIdentifier 
-9.15.1,classifications,error,2.03,"The country budget item description type is invalid.",//iati-activity/country-budget-items/budget-item/description/@type,DescriptionType 
 9.16.1,classifications,error,2.03,"The CRS channel code is invalid.",//iati-activity/crs-add/channel-code/text(),CRSChannelCode 
 9.17.1,classifications,error,2.03,"The CRS other flag code is invalid.",//iati-activity/crs-add/other-flags/@code,CRSAddOtherFlags 
 9.18.1,classifications,error,2.03,"The currency code is invalid.",//iati-activity/crs-add/loan-status/@currency,Currency 
@@ -242,7 +240,6 @@ id,category,severity,version,message,xpath,codelist
 9.53.1,relations,error,2.03,"The related activity type is invalid.",//iati-activity/related-activity/@type,RelatedActivityType 
 9.54.1,identifiers,error,2.03,"The organisation type is invalid.",//iati-activity/reporting-org/@type,OrganisationType 
 9.55.1,performance,error,2.03,"The result type is invalid.",//iati-activity/result/@type,ResultType 
-9.56.1,performance,error,2.03,"The result description type is invalid.",//iati-activity/result/description/@type,DescriptionType 
 9.57.1,performance,error,2.03,"The document format is invalid.",//iati-activity/result/document-link/@format,FileFormat 
 9.58.1,performance,error,2.03,"The document category code is invalid.",//iati-activity/result/document-link/category/@code,DocumentCategory 
 9.59.1,performance,error,2.03,"The language code is invalid.",//iati-activity/result/document-link/language/@code,Language 
@@ -250,7 +247,6 @@ id,category,severity,version,message,xpath,codelist
 9.61.1,performance,error,2.03,"The document format is invalid.",//iati-activity/result/indicator/baseline/document-link/@format,FileFormat 
 9.62.1,performance,error,2.03,"The document category code is invalid.",//iati-activity/result/indicator/baseline/document-link/category/@code,DocumentCategory 
 9.63.1,performance,error,2.03,"The language code is invalid.",//iati-activity/result/indicator/baseline/document-link/language/@code,Language 
-9.64.1,performance,error,2.03,"The indicator description type is invalid.",//iati-activity/result/indicator/description/@type,DescriptionType 
 9.65.1,performance,error,2.03,"The document format is invalid.",//iati-activity/result/indicator/document-link/@format,FileFormat 
 9.66.1,performance,error,2.03,"The document category code is invalid.",//iati-activity/result/indicator/document-link/category/@code,DocumentCategory 
 9.67.1,performance,error,2.03,"The language code is invalid.",//iati-activity/result/indicator/document-link/language/@code,Language 
