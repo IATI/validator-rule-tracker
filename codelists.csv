@@ -11,7 +11,6 @@ id,category,severity,version,message,xpath,codelist
 9.12.1,information,error,2.01,"The contact information type is invalid.",//iati-activity/contact-info/@type,ContactType 
 9.13.1,classifications,error,2.01,"The country budget identifier vocabulary is invalid.",//iati-activity/country-budget-items/@vocabulary,BudgetIdentifierVocabulary 
 9.14.1,classifications,error,2.01,"The country budget item identifier is invalid.",//iati-activity/country-budget-items/budget-item[../@vocabulary = '1']/@code,BudgetIdentifier 
-9.15.1,classifications,error,2.01,"The country budget item description type is invalid.",//iati-activity/country-budget-items/budget-item/description/@type,DescriptionType 
 9.17.1,classifications,error,2.01,"The CRS other flag code is invalid.",//iati-activity/crs-add/other-flags/@code,CRSAddOtherFlags 
 9.18.1,classifications,error,2.01,"The currency code is invalid.",//iati-activity/crs-add/loan-status/@currency,Currency 
 9.19.1,classifications,error,2.01,"The repayment plan code is invalid.",//iati-activity/crs-add/loan-terms/repayment-plan/@code,LoanRepaymentPeriod 
@@ -46,9 +45,7 @@ id,category,severity,version,message,xpath,codelist
 9.53.1,relations,error,2.01,"The related activity type is invalid.",//iati-activity/related-activity/@type,RelatedActivityType 
 9.54.1,identifiers,error,2.01,"The organisation type is invalid.",//iati-activity/reporting-org/@type,OrganisationType 
 9.55.1,performance,error,2.01,"The result type is invalid.",//iati-activity/result/@type,ResultType 
-9.56.1,performance,error,2.01,"The result description type is invalid.",//iati-activity/result/description/@type,DescriptionType 
 9.60.1,performance,error,2.01,"The indicator measure is invalid.",//iati-activity/result/indicator/@measure,IndicatorMeasure 
-9.64.1,performance,error,2.01,"The indicator description type is invalid.",//iati-activity/result/indicator/description/@type,DescriptionType 
 9.76.1,classifications,error,2.01,"The OECD DAC sector is invalid.",//iati-activity/sector[@vocabulary = '1' or not(@vocabulary)]/@code,Sector 
 9.77.1,classifications,error,2.01,"The OECD DAC category is invalid.",//iati-activity/sector[@vocabulary = '2']/@code,SectorCategory 
 9.129.1,classifications,error,2.01,"The UNSDG goal code is invalid.",//iati-activity/sector[@vocabulary = '7']/@code,UNSDG-Goals 
@@ -96,7 +93,6 @@ id,category,severity,version,message,xpath,codelist
 9.12.1,information,error,2.02,"The contact information type is invalid.",//iati-activity/contact-info/@type,ContactType 
 9.13.1,classifications,error,2.02,"The country budget identifier vocabulary is invalid.",//iati-activity/country-budget-items/@vocabulary,BudgetIdentifierVocabulary 
 9.14.1,classifications,error,2.02,"The country budget item identifier is invalid.",//iati-activity/country-budget-items/budget-item[../@vocabulary = '1']/@code,BudgetIdentifier 
-9.15.1,classifications,error,2.02,"The country budget item description type is invalid.",//iati-activity/country-budget-items/budget-item/description/@type,DescriptionType 
 9.16.1,classifications,error,2.02,"The CRS channel code is invalid.",//iati-activity/crs-add/channel-code/text(),CRSChannelCode 
 9.17.1,classifications,error,2.02,"The CRS other flag code is invalid.",//iati-activity/crs-add/other-flags/@code,CRSAddOtherFlags 
 9.18.1,classifications,error,2.02,"The currency code is invalid.",//iati-activity/crs-add/loan-status/@currency,Currency 
@@ -136,9 +132,7 @@ id,category,severity,version,message,xpath,codelist
 9.53.1,relations,error,2.02,"The related activity type is invalid.",//iati-activity/related-activity/@type,RelatedActivityType 
 9.54.1,identifiers,error,2.02,"The organisation type is invalid.",//iati-activity/reporting-org/@type,OrganisationType 
 9.55.1,performance,error,2.02,"The result type is invalid.",//iati-activity/result/@type,ResultType 
-9.56.1,performance,error,2.02,"The result description type is invalid.",//iati-activity/result/description/@type,DescriptionType 
 9.60.1,performance,error,2.02,"The indicator measure is invalid.",//iati-activity/result/indicator/@measure,IndicatorMeasure 
-9.64.1,performance,error,2.02,"The indicator description type is invalid.",//iati-activity/result/indicator/description/@type,DescriptionType 
 9.74.1,performance,error,2.02,"The indicator reference code vocabulary is invalid.",//iati-activity/result/indicator/reference/@vocabulary,IndicatorVocabulary 
 9.76.1,classifications,error,2.02,"The OECD DAC sector is invalid.",//iati-activity/sector[@vocabulary = '1' or not(@vocabulary)]/@code,Sector 
 9.77.1,classifications,error,2.02,"The OECD DAC category is invalid.",//iati-activity/sector[@vocabulary = '2']/@code,SectorCategory 
