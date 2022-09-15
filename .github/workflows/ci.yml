@@ -8,9 +8,6 @@ on:
     branches:
       - main
 
-env:
-  NODE_VERSION: '14.x'
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,14 +15,28 @@ jobs:
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@v3
 
-      - name: 'Setup Node ${{ env.NODE_VERSION }} Environment'
+      - name: 'Setup Node Environment'
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
+          node-version-file: '.nvmrc'
 
       - name: 'Install Dependencies with Npm'
         run: npm install
+
+      - name: 'Extract and Diff Codelist CSV'
+        # Should exit 1 (fail) if there is a difference - prevents dependabot automation from changing it live
+        # If you're trying to merge a PR manually, make sure you commit the changes to codelists.csv
+        run: |
+          npm run codelists
+          git diff --quiet codelists.csv 
+      
+      - name: 'Extract and Diff Ruleset CSV'
+        # Should exit 1 (fail) if there is a difference - prevents dependabot automation from changing it live
+        # If you're trying to merge a PR manually, make sure you commit the changes to rulesets.csv
+        run: |
+          npm run rulesets
+          git diff --quiet rulesets.csv 
 
   automerge:
     needs: build
