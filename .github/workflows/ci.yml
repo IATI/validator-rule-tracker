@@ -8,9 +8,6 @@ on:
     branches:
       - main
 
-env:
-  NODE_VERSION: '14.x'
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,11 +15,11 @@ jobs:
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@v3
 
-      - name: 'Setup Node ${{ env.NODE_VERSION }} Environment'
+      - name: 'Setup Node Environment'
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
+          node-version-file: '.nvmrc'
 
       - name: 'Install Dependencies with Npm'
         run: npm install
