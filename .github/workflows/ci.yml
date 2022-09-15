@@ -24,6 +24,20 @@ jobs:
       - name: 'Install Dependencies with Npm'
         run: npm install
 
+      - name: 'Extract and Diff Codelist CSV'
+        # Should exit 1 (fail) if there is a difference - prevents dependabot automation from changing it live
+        # If you're trying to merge a PR manually, make sure you commit the changes to codelists.csv
+        run: |
+          npm run codelists
+          git diff --quiet codelists.csv 
+      
+      - name: 'Extract and Diff Ruleset CSV'
+        # Should exit 1 (fail) if there is a difference - prevents dependabot automation from changing it live
+        # If you're trying to merge a PR manually, make sure you commit the changes to rulesets.csv
+        run: |
+          npm run rulesets
+          git diff --quiet rulesets.csv 
+
   automerge:
     needs: build
     runs-on: ubuntu-latest
