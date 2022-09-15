@@ -4,18 +4,20 @@ import { parseStringPromise } from "xml2js";
 import { fetchTextfromGitHub } from "../utils/utils.js";
 
 const VERSIONS = ["2.01", "2.02", "2.03"];
+const codelistRepo = "IATI-Validator-Codelists";
 
 let csv = fs.createWriteStream(`codelists.csv`);
 csv.write(`id,category,severity,version,message,xpath,codelist \n`);
 
 await VERSIONS.reduce(async (memo, version) => {
   await memo;
-  const codelistBranch = `v${version}/validatorCodelist`;
+
+  const codelistBranch = `version-${version}`;
 
   const versCodelistMapping = await fetchTextfromGitHub(
-    "IATI-Codelists",
+    codelistRepo,
     codelistBranch,
-    "mapping.xml"
+    "rule_mapping.xml"
   );
 
   // parse XML
