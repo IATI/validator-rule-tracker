@@ -17,7 +17,7 @@ jobs:
           echo "Event '${{ github.event.action }}' for $RESOURCE_NAME received from $TRIGGER_REPO and commit sha $TRIGGER_SHA"
 
       - name: 'Checkout GitHub Action'
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: 'Setup Node Environment'
         uses: actions/setup-node@v6
